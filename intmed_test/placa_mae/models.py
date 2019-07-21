@@ -3,7 +3,7 @@ from produto.models import Produto
 
 # Create your models here.
 class PlacaMae(models.Model):
-    nome = models.CharFiled(max_length=30)
+    nome = models.CharField(max_length=30)
     produto = models.ForengKey(Produto, on_delete=models.PROTECT)
     processador = models.ForengKey(Processador)
     qtd_memoria = models.PositiveSmallIntegerField()
