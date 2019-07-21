@@ -4,4 +4,4 @@ from produto.models import Produto
 class Processador(models.Model):
     nome = models.CharField(max_length=30)
     marca = models.CharField(max_length=30)
-    produto = models.ForeignKey(Produto)
+    produto = models.ForeignKey(Produto, on_delete=models.PROTECT)
