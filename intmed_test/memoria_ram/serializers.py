@@ -1,7 +1,7 @@
-from .models import MomoriaRam
+from .models import MemoriaRam
 from rest_framework import serializers
 
-class MomoriaRamSerializer(serializers.ModelSerializer):
+class MemoriaRamSerializer(serializers.ModelSerializer):
     class Meta:
         model = MomoriaRam
         fields = ('__all__')
