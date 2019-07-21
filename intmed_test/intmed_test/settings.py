@@ -25,7 +25,7 @@ SECRET_KEY = 'q609xa71*v)$)z!z19la831xvkrjpsm($tct$tigy!$=g$-k0%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [amarocesar.pythonanywhere.com]
+ALLOWED_HOSTS = ['amarocesar.pythonanywhere.com']
 
 
 # Application definition
