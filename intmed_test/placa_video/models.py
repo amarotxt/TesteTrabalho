@@ -3,5 +3,5 @@ from produto.models import Produto
 
 # Create your models here.
 class PlacaVideo(models.Model):
-    produto = models.ForengKey(Produto)
+    produto = models.ForeingKey(Produto)
     nome = models.CharField(max_length=30)
