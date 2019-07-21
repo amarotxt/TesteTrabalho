@@ -1,4 +1,4 @@
-from .models import MemoriaRam
+from memoria_ram.models import MemoriaRam
 from rest_framework import serializers
 
 class MemoriaRamSerializer(serializers.ModelSerializer):
