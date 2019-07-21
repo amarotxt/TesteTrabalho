@@ -4,6 +4,6 @@ from .serializers import ProcessadorSerializer
 from .models import Processador
 # Create your views here.
 
-class Processador(viewsets.ModelViewset):
+class Processador(viewsets.ModelViewSet):
     queryset = Processador.objects.all()
     serializer_class = ProcessadorSerializer 

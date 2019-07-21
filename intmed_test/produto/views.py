@@ -6,6 +6,6 @@ from .serializers import ProdutoSerializer
 from .models import Produto
 # Create your views here.
 
-class Produto(viewsets.ModelViewset):
+class Produto(viewsets.ModelViewSet):
     queryset = Produto.objects.all()
     serializer_class = ProdutoSerializer 
