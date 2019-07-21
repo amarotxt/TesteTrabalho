@@ -4,7 +4,7 @@ from .serializers import MemoriaRamSerializer
 from .models import MemoriaRam
 # Create your views here.
 
-class MemoriaRam(viewsets.ModelViewSet):
+class MemoriaRamViewSet(viewsets.ModelViewSet):
     queryset = MemoriaRam.objects.all()
     serializer_class = MemoriaRamSerializer 
 
