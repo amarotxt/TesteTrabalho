@@ -5,7 +5,7 @@ from processador.models import Processador
 class PlacaMae(models.Model):
     nome = models.CharField(max_length=30)
     produto = models.ForeignKey(Produto, on_delete=models.PROTECT)
-    processador = models.ManyToManyField(Processador, on_delete=models.PROTECT)
+    processador = models.ManyToManyField(Processador)
     qtd_memoria_ram_slots = models.PositiveSmallIntegerField()
     qtd_memoria_ram_total = models.PositiveSmallIntegerField()
     video_integrado = models.BooleanField()
