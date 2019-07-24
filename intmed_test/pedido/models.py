@@ -10,5 +10,5 @@ class Pedido(models.Model):
     placa_mae = models.ForeignKey(PlacaMae, on_delete=models.PROTECT) 
     placa_video = models.ForeignKey(PlacaVideo, on_delete=models.PROTECT) 
     processador = models.ForeignKey(Processador, on_delete=models.PROTECT) 
-    memoria_ram = models.ManyToManyField(MemoriaRam, on_delete=models.PROTECT) 
+    memoria_ram = models.ManyToManyField(MemoriaRam) 
     cliente = models.ForeignKey(User, on_delete=models.PROTECT)
