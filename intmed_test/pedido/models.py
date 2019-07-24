@@ -2,7 +2,7 @@ from django.db import models
 from placa_mae.models import PlacaMae
 from placa_video.models import PlacaVideo
 from processador.models import Processador
-from memoria_ram import MemoriaRam
+from memoria_ram.models import MemoriaRam
 from django.contrib.auth.models import User
 
 # Create your models here.
