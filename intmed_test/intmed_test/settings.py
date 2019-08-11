@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'model_mommy',
     'memoria_ram',
     'pedido',
     'placa_mae',
