@@ -8,7 +8,7 @@ from placa_mae.factories import PlacaMaeFactory
 
 from placa_video.models import PlacaVideo
 from processador.models import Processador
-from memora_ram.models import MemoriaRam
+from memoria_ram.models import MemoriaRam
 from placa_mae.models import PlacaMae
 import requests
 
