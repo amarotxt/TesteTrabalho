@@ -7,6 +7,6 @@ class PlacaVideoFactory():
     def create_placa_video(self):
         placa_video = mommy.make(
             PlacaVideo,
-            produto=ProdutoFactory.create_produto()
+            produto=ProdutoFactory().create_produto()
              )
         return placa_video

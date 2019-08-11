@@ -12,6 +12,6 @@ class PlacaMaeFactory():
             processador=ProcessadorFactory().create_processador(),
             qtd_memoria_slots=random.coices([2,4]),
             qtd_memoria_total=random.coices([16,64]),
-            produto=ProdutoFactory.create_produto()
+            produto=ProdutoFactory().create_produto()
              )
         return placa_mae

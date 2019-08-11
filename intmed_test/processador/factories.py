@@ -9,7 +9,7 @@ class ProcessadorFactory():
         processador = mommy.make(
             Processador,
             marca=random.choices(choice_ram),
-            produto=ProdutoFactory.create_produto()
+            produto=ProdutoFactory().create_produto()
              )
             
         
@@ -19,12 +19,12 @@ class ProcessadorFactory():
         mommy.make(
             Processador,
             marca='Intel',
-            produto=ProdutoFactory.create_produto()
+            produto=ProdutoFactory().create_produto()
         )
         mommy.make(
             Processador,
             marca='AMD',
-            produto=ProdutoFactory.create_produto()
+            produto=ProdutoFactory().create_produto()
         )            
         processador = Processador.objects.all()
         
