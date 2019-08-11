@@ -3,7 +3,7 @@ from django.test import TestCase
 from placa_mae.factories import PlacaMaeFactory
 from placa_video.factories import PlacaVideoFactory
 from processador.factories import ProcessadorFactory
-from memeora_ram.factories import MemoriaRamFactory
+from memoria_ram.factories import MemoriaRamFactory
 from placa_mae.factories import PlacaMaeFactory
 
 from placa_video.models import PlacaVideo
