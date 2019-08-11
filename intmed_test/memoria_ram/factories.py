@@ -8,7 +8,7 @@ class MemoriaRamFactory():
     def create_memoria_ram(self):
         memoria_ram = mommy.make(
             MemoriaRam,
-            tamanho=random.coices([16,64]),
+            tamanho=random.choices([16,64]),
             produto=ProdutoFactory().create_produto()
             
              )
