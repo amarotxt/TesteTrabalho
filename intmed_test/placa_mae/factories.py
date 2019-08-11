@@ -6,7 +6,7 @@ from processador.factories import ProcessadorFactory
 from model_mommy import mommy
 
 class PlacaMaeFactory():
-    def create_placa_video(self):
+    def create_placa_mae(self):
         placa_mae = mommy.make(
             PlacaMae,
             processador=ProcessadorFactory.create_processador(),
