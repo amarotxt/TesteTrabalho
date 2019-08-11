@@ -8,7 +8,7 @@ class ProcessadorFactory():
         choice_ram = ['Intel', 'AMD']
         processador = mommy.make(
             Processador,
-            marca=random.choices(choice_ram),
+            marca=random.choices(choice_ram)[0],
             produto=ProdutoFactory().create_produto()
              )
             
