@@ -79,6 +79,6 @@ class PedidoSerializer(serializers.ModelSerializer):
 
         if validar_placa_video(data):
             placa_video = PlacaVideo.objects.filter(pk=data.placa_video.id).first()
-            print('placa video deu bom', placa_video)]
-            
+            print('placa video deu bom', placa_video)
+
         return super(PedidoSerializer, self).validate(data)
