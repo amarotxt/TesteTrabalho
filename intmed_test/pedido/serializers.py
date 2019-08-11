@@ -53,10 +53,9 @@ def validar_placa_video(instance):
                 return True
             else:
                 raise ValidationError({'detail': f'Placa de video não foi adicionada'})
-
-            if 
             return True    
-    
+    raise ValidationError({'detail': f'Placa mãe não adicionada'})
+                
 
 class PedidoSerializer(serializers.ModelSerializer):
     cliente = serializers.PrimaryKeyRelatedField(
