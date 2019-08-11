@@ -2,7 +2,7 @@ from .models import Pedido
 from memoria_ram.models import MemoriaRam
 from processador.models import Processador
 from placa_mae.models import PlacaMae
-from placa_video.models import PlacaVideos
+from placa_video.models import PlacaVideo
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 
