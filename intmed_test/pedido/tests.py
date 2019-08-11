@@ -19,7 +19,7 @@ class PedidoTestCase(TestCase):
         self.cliente = self.client.force_login(self.user)
         self.placa_mae = PlacaMaeFactory().create_placa_mae()
         self.processador = Processador.objects.all() 
-        self.memoria = MemoriaFactory().create_memoria_ram()
+        self.memoria = MemoriaRamFactory().create_memoria_ram()
         self.placa_video = PlacaVideoFactory().create_memoria_ram()
 
     def test_create_pedido(self):
