@@ -25,7 +25,7 @@ class PedidoTestCase(TestCase):
     def test_create_pedido(self):
         data = {
             'placa_mae' : self.placa_mae.pk,
-            'placa_video' : self.placa_videio.pk,
+            'placa_video' : self.placa_video.pk,
             'memoriaram' : [self.memoria.pk],
             'processador' : self.processador,
         }
