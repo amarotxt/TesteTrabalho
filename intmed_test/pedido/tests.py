@@ -5,7 +5,8 @@ from placa_video.factories import PlacaVideoFactory
 from processador.factories import ProcessadorFactory
 from memoria_ram.factories import MemoriaRamFactory
 from placa_mae.factories import PlacaMaeFactory
-
+from django.urls import reverse
+from django.urls import reverse_lazy
 from placa_video.models import PlacaVideo
 from processador.models import Processador
 from memoria_ram.models import MemoriaRam
@@ -29,5 +30,6 @@ class PedidoTestCase(TestCase):
             'memoriaram' : [self.memoria.pk],
             'processador' : self.processador,
         }
+        reverse_lazy('pedido-list')
         import ipdb; ipdb.set_trace()
         pass
