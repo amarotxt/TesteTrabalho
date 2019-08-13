@@ -20,7 +20,7 @@ from rest_framework.exceptions import ValidationError
 def validar_memoria_ram(instance):
     
     memorias_rams = instance['memoria_ram']    
-    placa_mae = PlacaMae.objects.filter(processador=instace.placa_mae.id).first()
+    placa_mae =  instance['placa_mae']  
     if memoria_ram is not None  and placa_mae is not None:
         count_memoria_ram = memorias_rams.count()
         qtd_memoria_ram = 0
@@ -35,7 +35,8 @@ def validar_memoria_ram(instance):
 def validar_placa_mae(instance):
    
     processador = instance['processador']
-    placa_mae = PlacaMae.objects.filter(processador=instace.placa_mae.id).first()
+    placa_mae = instance['placa_mae']  
+    # PlacaMae.objects.filter(processador=instace.placa_mae.id).first()
     if processador is not None and placa_mae is not None:
         placa_mae_processadores_list = placa_mae.processador.all()
         if processador in placa_mae_processadores_list:
