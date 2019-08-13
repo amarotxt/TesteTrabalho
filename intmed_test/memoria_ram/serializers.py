@@ -1,6 +1,6 @@
 from .models import MemoriaRam
 from rest_framework import serializers
-from produto import Produto
+
 class MemoriaRamSerializer(serializers.ModelSerializer):
     
     class Meta:
@@ -10,7 +10,8 @@ class MemoriaRamSerializer(serializers.ModelSerializer):
             'nome': {'allow_null': False, 'required': True},
             'tamanho': {'allow_null': False,'required': True,},     
         }
-
+    
+  
 
 
 
