@@ -65,7 +65,8 @@ class PedidoSerializer(serializers.ModelSerializer):
     cliente = serializers.HiddenField(
         default=serializers.CurrentUserDefault()
     )
-    memoria_ram = serializers.PrimaryKeyRelatedField(queryset=MemoriaRam.objects.all() ,many=True)
+    memoria_ram = serializers.ListFielt(source='memoriaram')
+    # memoria_ram = serializers.PrimaryKeyRelatedField(queryset=MemoriaRam.objects.all() ,many=True)
     class Meta:
         model = Pedido
         fields = ('__all__')
