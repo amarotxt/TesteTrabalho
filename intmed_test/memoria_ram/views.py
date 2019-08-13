@@ -14,4 +14,4 @@ class MemoriaRamViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(data=self.request.data)
         if not serializer.is_valid():
             raise serializers.ValidationError()
-        
+        Produto.onjects.create(fornecedor='Atu')
