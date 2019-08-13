@@ -31,7 +31,8 @@ class PedidoTestCase(TestCase):
             'memoria_ram' : [self.memoria.pk], 
             'processador' : self.processador.pk, 
         }
-        path_url = self.url+reverse_lazy('pedido-list')
+        url = f'{self.url}{reverse_lazy('pedido-list')}'
+        
         resposta = requests.post(path_url, data=data)
         
         import ipdb; ipdb.set_trace()
