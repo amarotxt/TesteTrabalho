@@ -28,7 +28,7 @@ class PedidoTestCase(TestCase):
             'placa_mae' : self.placa_mae.pk, 
             'placa_video' : self.placa_video.pk, 
             'memoria_ram' : [self.memoria.pk], 
-            'processador' : self.processador.first().pk, 
+            'processador' : self.processador.pk, 
         }
         resposta = requests.post(reverse_lazy('pedido-list'), data=data)
         
