@@ -21,7 +21,7 @@ def validar_memoria_ram(instance):
     
     memorias_rams = instance['memoria_ram']    
     placa_mae =  instance['placa_mae']  
-    if memoria_ram is not None  and placa_mae is not None:
+    if memoria_ram and memoria_ram is not None and placa_mae and placa_mae is not None:
         count_memoria_ram = memorias_rams.count()
         qtd_memoria_ram = 0
         for m in memorias_rams:
@@ -51,9 +51,9 @@ def validar_placa_video(instance):
 
     placa_mae = instance['placa_mae']
     placa_video = instance['placa_video']
-    if placa_mae is not None:
+    if placa_mae and placa_mae is not None:
         if not placa_mae.video_integrado:
-            if placa_video is not None:
+            if placa_video and placa_video is not None:
                 return True
             else:
                 raise ValidationError({'detail': f'Placa de video não foi adicionada'})
