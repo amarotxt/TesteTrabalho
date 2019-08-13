@@ -31,7 +31,8 @@ class PedidoTestCase(TestCase):
             'memoria_ram' : [self.memoria.pk], 
             'processador' : self.processador.pk, 
         }
-        url = f'{self.url}{reverse_lazy('pedido-list')}'
+        reverse = reverse_lazy('pedido-list')
+        url = f'{self.url}{reverse}'
         
         resposta = requests.post(path_url, data=data)
         
