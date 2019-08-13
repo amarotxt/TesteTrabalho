@@ -34,7 +34,7 @@ class PedidoTestCase(TestCase):
         reverse = reverse_lazy('pedido-list')
         url = f'{self.url}{reverse}'
         
-        resposta = requests.post(path_url, data=data)
+        resposta = requests.post(url, data=data)
         
         import ipdb; ipdb.set_trace()
         pass
