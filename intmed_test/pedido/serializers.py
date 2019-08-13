@@ -73,14 +73,15 @@ class PedidoSerializer(serializers.ModelSerializer):
   
     def validate(self, data):
         if validar_placa_mae(data):
-            placa_mae = PlacaMae.objects.filter(processador=data.placa_mae.id).first()
+            placa_mae = data['placa_mae']
             print('placa mae deu bom', placa_mae)
         # if validar_processador(data):
             # placa_mae = PlacaMae.objects.filter(processador=data.placa_mae.id).first()
             # print('pprocessador deu bom', placa_mae)
         if validar_memoria_ram :
-            memoria = MemoriaRam.objects.filter(pk=data.memoria_ram.id).first()
-            print('placa ram deu bom', placa_video)
+            memoria = data['memoria_ram']
+            # memoria = MemoriaRam.objects.filter(pk=data.memoria_ram.id).first()
+            print('placa ram deu bom', memoria)
 
         if validar_placa_video(data):
             placa_video = PlacaVideo.objects.filter(pk=data.placa_video.id).first()
