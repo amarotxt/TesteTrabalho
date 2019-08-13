@@ -50,7 +50,7 @@ def validar_placa_mae(instance):
 def validar_placa_video(instance):
 
     placa_mae = instance['placa_mae']
-    placa_videos = instance['placa_video']
+    placa_video = instance['placa_video']
     if placa_mae is not None:
         if not placa_mae.video_integrado:
             if placa_video is not None:
