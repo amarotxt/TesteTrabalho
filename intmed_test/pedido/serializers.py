@@ -84,7 +84,8 @@ class PedidoSerializer(serializers.ModelSerializer):
             print('placa ram deu bom', memoria)
 
         if validar_placa_video(data):
-            placa_video = PlacaVideo.objects.filter(pk=data.placa_video.id).first()
+            placa_video = data['placa_video']
+            # placa_video = PlacaVideo.objects.filter(pk=data.placa_video.id).first()
             print('placa video deu bom', placa_video)
 
         return super(PedidoSerializer, self).validate(data)
