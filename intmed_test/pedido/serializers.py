@@ -65,6 +65,7 @@ class PedidoSerializer(serializers.ModelSerializer):
     read_only=True, 
     default=serializers.CurrentUserDefault()
     ) 
+    memoria_ram = serializers.PrimaryKeyRelatedField(many=True)
     class Meta:
         model = Pedido
         fields = ('__all__')
