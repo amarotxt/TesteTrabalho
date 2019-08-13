@@ -61,7 +61,13 @@ def validar_placa_video(instance):
     raise ValidationError({'detail': f'Placa mãe não adicionada'})
 
 
+class PedidoMemoriaRamSerializer(serializers.ModelSerializer):
+    class Meta: 
+        model = PedidoMermoriaram
+        fields = ('__all__')
+
 class PedidoSerializer(serializers.ModelSerializer):
+    memoria_ram = PedidoMemoriaRamSerializer()
     cliente = serializers.HiddenField(
         default=serializers.CurrentUserDefault()
     )
