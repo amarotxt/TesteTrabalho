@@ -33,8 +33,8 @@ def validar_memoria_ram(instance):
 
 
 def validar_placa_mae(instance):
-    import ipdb; ipdb.set_trace()
-    processador = instance['placa_mae']
+   
+    processador = instance['processador']
     placa_mae = PlacaMae.objects.filter(processador=instace.placa_mae.id).first()
     if processador is not None and placa_mae is not None:
         placa_mae_processadores_list = placa_mae.processador.all()
