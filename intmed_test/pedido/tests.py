@@ -19,17 +19,18 @@ class PedidoTestCase(TestCase):
         self.user = User.objects.create(username='testuser', password='12345', email='test@test.com')
         self.cliente = self.client.force_login(self.user)
         self.placa_mae = PlacaMaeFactory().create_placa_mae()
-        self.processador = Processador.objects.all() 
+        self.processador = Processador.objects.all().first()
         self.memoria = MemoriaRamFactory().create_memoria_ram()
         self.placa_video = PlacaVideoFactory().create_placa_video()
 
     def test_create_pedido(self):
-        data = {
-            'placa_mae' : self.placa_mae.pk,
-            'placa_video' : self.placa_video.pk,
-            'memoriaram' : [self.memoria.pk],
-            'processador' : self.processador,
+        data = { 
+            'placa_mae' : self.placa_mae.pk, 
+            'placa_video' : self.placa_video.pk, 
+            'memoria_ram' : [self.memoria.pk], 
+            'processador' : self.processador.first().pk, 
         }
-        reverse_lazy('pedido-list')
+        resposta = requests.post(reverse_lazy('pedido-list'), data=data)
+        
         import ipdb; ipdb.set_trace()
         pass

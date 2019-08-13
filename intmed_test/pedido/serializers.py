@@ -18,6 +18,7 @@ from rest_framework.exceptions import ValidationError
 
 
 def validar_memoria_ram(instance):
+    import ipdb; ipdb.set_trace()
     memorias_rams = instance.memoria_ram    
     placa_mae = PlacaMae.objects.filter(processador=instace.placa_mae.id).first()
     if memoria_ram is not None  and placa_mae is not None:
@@ -32,6 +33,7 @@ def validar_memoria_ram(instance):
 
 
 def validar_placa_mae(instance):
+    import ipdb; ipdb.set_trace()
     processador = Processador.objects.filter(id=instance.processado.id).first()
     placa_mae = PlacaMae.objects.filter(processador=instace.placa_mae.id).first()
     if processador is not None and placa_mae is not None:
@@ -45,6 +47,7 @@ def validar_placa_mae(instance):
 
 
 def validar_placa_video(instance):
+    import ipdb; ipdb.set_trace()
     placa_mae = PlacaMae.objects.filter(processador=instace.placa_mae.id).first()
     placa_videos = PlacaVideo.objects.filter(processador=instace.placa_video.id).first()
     if placa_mae is not None:
