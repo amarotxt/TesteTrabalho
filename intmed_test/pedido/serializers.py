@@ -48,7 +48,7 @@ def validar_placa_mae(instance):
 
 def validar_placa_video(instance):
     import ipdb; ipdb.set_trace()
-    placa_mae = PlacaMae.objects.filter(processador=instace.placa_mae.id).first()
+    placa_mae =instace [placa_mae]
     placa_videos = PlacaVideo.objects.filter(processador=instace.placa_video.id).first()
     if placa_mae is not None:
         if not placa_mae.video_integrado:
