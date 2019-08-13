@@ -16,7 +16,7 @@ import requests
 # Create your tests here.
 class PedidoTestCase(TestCase):
     def setUp(self):
-        self.url="'http://amarocesar.pythonanywhere.com/"
+        self.url="'http://amarocesar.pythonanywhere.com"
         self.user = User.objects.create(username='testuser', password='12345', email='test@test.com')
         self.cliente = self.client.force_login(self.user)
         self.placa_mae = PlacaMaeFactory().create_placa_mae()
