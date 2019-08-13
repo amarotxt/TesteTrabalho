@@ -16,6 +16,7 @@ import requests
 # Create your tests here.
 class PedidoTestCase(TestCase):
     def setUp(self):
+        self.url="'http://amarocesar.pythonanywhere.com/"
         self.user = User.objects.create(username='testuser', password='12345', email='test@test.com')
         self.cliente = self.client.force_login(self.user)
         self.placa_mae = PlacaMaeFactory().create_placa_mae()
@@ -30,7 +31,8 @@ class PedidoTestCase(TestCase):
             'memoria_ram' : [self.memoria.pk], 
             'processador' : self.processador.pk, 
         }
-        resposta = requests.post(reverse_lazy('pedido-list'), data=data)
+        path_url = self.url+reverse_lazy('pedido-list')
+        resposta = requests.post(path_url, data=data)
         
         import ipdb; ipdb.set_trace()
         pass
