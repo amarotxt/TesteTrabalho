@@ -1,9 +1,9 @@
 from .models import PlacaVideo
 from rest_framework import serializers
-from produto.serializers import ProdutoSerializer
+# from produto.serializers import ProdutoSerializer
 
 class PlacaVideoSerializer(serializers.ModelSerializer):
-    produto = ProdutoSerializer()
+    # produto = ProdutoSerializer()
     class Meta:
         model = PlacaVideo
         fields = ('__all__')
