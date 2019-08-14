@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'placa_video',
     'processador',
     'produto',
+    'intmed_test',
 ]
 
 MIDDLEWARE = [
