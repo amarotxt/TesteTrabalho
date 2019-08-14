@@ -6,6 +6,6 @@ class ProcessadorSerializer(serializers.ModelSerializer):
     # produto = ProdutoSerializer()
     class Meta:
         model = Processador
-        fields = ('__all__')
+        fields = ('nome', 'tamanho')
 
 
