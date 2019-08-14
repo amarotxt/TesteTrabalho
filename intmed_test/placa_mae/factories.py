@@ -8,9 +8,10 @@ from model_mommy import mommy
 
 class PlacaMaeFactory():
     def create_placa_mae(self):
+        processador =  Processador.objects.all().first()
         placa_mae = mommy.make(
             PlacaMae,
-            processador=[Processador.objects.all().first() or ProcessadorFactory().create_processador(),],
+            processador=[ processador if processador else ProcessadorFactory().create_processador()],
             qtd_memoria_ram_slots=random.choices([2,4])[0],
             qtd_memoria_ram_total=random.choices([16,64])[0],
             produto=ProdutoFactory().create_produto(),
