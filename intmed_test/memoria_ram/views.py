@@ -10,8 +10,8 @@ class MemoriaRamViewSet(viewsets.ModelViewSet):
     queryset = MemoriaRam.objects.all()
     serializer_class = MemoriaRamSerializer 
 
-    def create(self, validated_data):
-        serializer = self.get_serializer(data=self.request.data)
-        if not serializer.is_valid():
-            raise serializers.ValidationError()
-        Produto.onjects.create(fornecedor='Atu')
+    # def create(self, validated_data):
+    #     serializer = self.get_serializer(data=self.request.data)
+    #     if not serializer.is_valid():
+    #         raise serializers.ValidationError()
+    #     Produto.objects.create(fornecedor='Atu')
