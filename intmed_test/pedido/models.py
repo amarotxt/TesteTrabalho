@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 class PedidoMemoriaRam(models.Model):
     memodira_ram = models.ForeignKey(MemoriaRam, on_delete=models.PROTECT)
-    quantidade = mdoels.PositiveSmallIntegerField()
+    quantidade = models.PositiveSmallIntegerField()
     
 # Create your models here.
 class Pedido(models.Model):
