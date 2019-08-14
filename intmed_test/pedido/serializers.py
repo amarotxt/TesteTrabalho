@@ -69,7 +69,7 @@ class PedidoMemoriaRamSerializer(serializers.ModelSerializer):
         fields = ('__all__')
 
 class PedidoSerializer(serializers.ModelSerializer):
-    memoria_ram = PedidoMemoriaRamSerializer(many=True)
+    memoria_ram = PedidoMemoriaRamSerializer()
     cliente = serializers.HiddenField(
         default=serializers.CurrentUserDefault()
     )
