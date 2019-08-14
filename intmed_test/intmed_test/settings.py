@@ -63,6 +63,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'intmed_test.urls'
 
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'basic': {
+            'type': 'basic'
+        }
+    },
+}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
