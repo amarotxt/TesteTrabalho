@@ -1,5 +1,5 @@
 from .models import Pedido
-from .models import PedidoMermoriaRam
+from .models import PedidoMemoriaRam
 from memoria_ram.models import MemoriaRam
 from processador.models import Processador
 from placa_mae.models import PlacaMae
