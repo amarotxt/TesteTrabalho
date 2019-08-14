@@ -63,22 +63,28 @@ def validar_placa_video(instance):
     raise ValidationError({'detail': f'Placa mãe não adicionada'})
 
 
-class PedidoMemoriaRamSerializer(serializers.ModelSerializer):
-    class Meta: 
-        model = PedidoMemoriaRam
-        fields = ('__all__')
+# class PedidoMemoriaRamSerializer(serializers.ModelSerializer):
+#     class Meta: 
+#         model = PedidoMemoriaRam
+#         fields = ('memodira_ram', 'quantidade')
 
 class PedidoSerializer(serializers.ModelSerializer):
-    memoria_ram = PedidoMemoriaRamSerializer()
+    
     cliente = serializers.HiddenField(
         default=serializers.CurrentUserDefault()
-    )
-    # memoria_ram = serializers.ListField()
-    # memoria_ram = serializers.PrimaryKeyRelatedField(queryset=MemoriaRam.objects.all() ,many=True)
+        )
+    # memoria_ram = PedidoMemoriaRamSerializer(many=True)
+    memoria_ram = serializers.PrimaryKeyRelatedField(queryset=MemoriaRam.objects.all() ,many=True)
     class Meta:
         model = Pedido
         fields = ('__all__')
-  
+    
+        # def create(self, validated_data):
+        #     memoria_ram = validated_data.pop('memoria_ram')
+        #     for mr in memoria_ram:
+                
+        #     return album
+
     def validate(self, data):
         if validar_placa_mae(data):
             placa_mae = data['placa_mae']
