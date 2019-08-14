@@ -8,9 +8,9 @@ class ProcessadorSerializer(serializers.ModelSerializer):
         model = Processador
         fields = ('__all__')
 
-    def create(isntance, validated_data):
+    def create(self, validated_data):
         raise Exception(validated_data)
-    
+        
     # def update(isntance, validated_data):
     #     pass
 
