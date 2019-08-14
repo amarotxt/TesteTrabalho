@@ -65,7 +65,7 @@ def validar_placa_video(instance):
 
 class PedidoMemoriaRamSerializer(serializers.ModelSerializer):
     class Meta: 
-        model = PedidoMermoriaRam
+        model = PedidoMemoriaRam
         fields = ('__all__')
 
 class PedidoSerializer(serializers.ModelSerializer):
