@@ -13,7 +13,7 @@ class PlacaMaeFactory():
             ProcessadorFactory().create_processador()
         placa_mae = mommy.make(
             PlacaMae,
-            processador=[randon.choice(processadores)],
+            processador=[random.choice(processadores)],
             qtd_memoria_ram_slots=random.choices([2,4])[0],
             qtd_memoria_ram_total=random.choices([16,64])[0],
             produto=ProdutoFactory().create_produto(),
