@@ -5,6 +5,7 @@ from placa_mae.factories import PlacaMaeFactory
 from placa_video.factories import PlacaVideoFactory
 
 class Command(BaseCommand):
+    help = 'Seeds the database.'
     def create_class(self):
         for i in range(2):
             ProcessadorFactory().create_processador()
@@ -14,4 +15,4 @@ class Command(BaseCommand):
             
 
     def handle(self, *args, **options):
-        self.create_tags()
+        self.create_class()
