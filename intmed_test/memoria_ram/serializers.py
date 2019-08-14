@@ -6,7 +6,7 @@ class MemoriaRamSerializer(serializers.ModelSerializer):
     # produto = ProdutoSerializer(read_only=True)
     class Meta:
         model = MemoriaRam
-        fields = ('__all__')
+        fields = ('tamanho','nome')
         # extra_kwargs = {
         #     'nome': {'allow_null': False, 'required': True},
         #     'tamanho': {'allow_null': False,'required': True,},     
