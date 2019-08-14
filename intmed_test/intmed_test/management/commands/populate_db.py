@@ -11,6 +11,6 @@ class Command(BaseCommand):
         for i in range(2):
             ProcessadorFactory().create_processador()
             PlacaMaeFactory().create_placa_mae()
-            PlacaVideoFactory().create_placa_videos()
-            MemoriaRamFactory().create_placa_videos()
+            PlacaVideoFactory().create_placa_video()
+            MemoriaRamFactory().create_memoria_ram()
             
