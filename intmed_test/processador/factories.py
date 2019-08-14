@@ -15,17 +15,17 @@ class ProcessadorFactory():
         
         return processador
 
-    def list_processadores(self):
-        mommy.make(
-            Processador,
-            marca='Intel',
-            produto=ProdutoFactory().create_produto()
-        )
-        mommy.make(
-            Processador,
-            marca='AMD',
-            produto=ProdutoFactory().create_produto()
-        )            
-        processador = Processador.objects.all()
+    # def list_processadores(self):
+    #     mommy.make(
+    #         Processador,
+    #         marca='Intel',
+    #         produto=ProdutoFactory().create_produto()
+    #     )
+    #     mommy.make(
+    #         Processador,
+    #         marca='AMD',
+    #         produto=ProdutoFactory().create_produto()
+    #     )            
+    #     processador = Processador.objects.all()
         
-        return processador
+    #     return processador
