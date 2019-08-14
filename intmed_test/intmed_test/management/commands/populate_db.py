@@ -5,7 +5,7 @@ from placa_mae.factories import PlacaMaeFactory
 from placa_video.factories import PlacaVideoFactory
 
 class Command(BaseCommand):
-    help = 'Seeds the database
+    help = 'Seeds the database'
     @no_translations
     def handle(self, *args, **options):
         for i in range(2):
