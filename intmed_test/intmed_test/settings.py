@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'model_mommy',
     'memoria_ram',
+    'rest_framework_swagger',
     'pedido',
     'placa_mae',
     'placa_video',
