@@ -1,10 +1,12 @@
 from .models import Pedido
+from .models import PedidoMermoriaRam
 from memoria_ram.models import MemoriaRam
 from processador.models import Processador
 from placa_mae.models import PlacaMae
 from placa_video.models import PlacaVideo
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
+
 
 # def validar_processador(instance):
 #     processador = Processador.objects.filter(id=instance.processado.id).first()
@@ -63,11 +65,11 @@ def validar_placa_video(instance):
 
 class PedidoMemoriaRamSerializer(serializers.ModelSerializer):
     class Meta: 
-        model = PedidoMermoriaram
+        model = PedidoMermoriaRam
         fields = ('__all__')
 
 class PedidoSerializer(serializers.ModelSerializer):
-    memoria_ram = PedidoMemoriaRamSerializer()
+    memoria_ram = PedidoMemoriaRamSerializer(many=true)
     cliente = serializers.HiddenField(
         default=serializers.CurrentUserDefault()
     )
