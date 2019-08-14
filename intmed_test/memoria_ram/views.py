@@ -12,9 +12,9 @@ class MemoriaRamViewSet(viewsets.ModelViewSet):
     queryset = MemoriaRam.objects.all()
     serializer_class = MemoriaRamSerializer 
 
-    def create(self, request, *args, **kwargs):
-        response = super(MemoriaRamViewSet, self).create(request, *args, **kwargs)
-        if response.status == 201:
-            produto = Produto.objects.create()
-            memoria = Memoriaram.objects.get(response.data)
-        return response
+    # def create(self, request, *args, **kwargs):
+    #     response = super(MemoriaRamViewSet, self).create(request, *args, **kwargs)
+    #     if response.status == 201:
+    #         produto = Produto.objects.create()
+    #         memoria = Memoriaram.objects.get(response.data)
+    #     return response

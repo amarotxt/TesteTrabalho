@@ -3,10 +3,10 @@ from rest_framework import serializers
 from produto.serializers import ProdutoSerializer
 
 class MemoriaRamSerializer(serializers.ModelSerializer):
-    produto =  serializers.PrimaryKeyRelatedField(null=True, allow_null=True)
+    # produto = ProdutoSerializer(read_only=True)
     class Meta:
         model = MemoriaRam
-        fields = ('tamanho','nome')
+        fields = ('__all__')
         # extra_kwargs = {
         #     'nome': {'allow_null': False, 'required': True},
         #     'tamanho': {'allow_null': False,'required': True,},     
