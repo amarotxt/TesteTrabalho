@@ -3,7 +3,7 @@ from rest_framework import serializers
 from produto.serializers import ProdutoSerializer
 
 class MemoriaRamSerializer(serializers.ModelSerializer):
-    produto =  serializers.PrimaryKeyRelatedField(null=True, source='produto', allow_null=True)
+    produto =  serializers.PrimaryKeyRelatedField(null=True, allow_null=True)
     class Meta:
         model = MemoriaRam
         fields = ('tamanho','nome')
